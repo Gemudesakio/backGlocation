@@ -4,7 +4,6 @@ import dotenv from "dotenv"
 import cors from "cors"
 import morgan from "morgan"
 
-import {connectDB, sequelize} from "./config/database.js";
 // Cargar variables de entorno
 dotenv.config();
 
