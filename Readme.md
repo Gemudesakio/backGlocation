@@ -160,21 +160,9 @@ Una vez iniciado el servidor, puede acceder a:
 
 http://localhost:8080/api-docs
 
-
 Desde esta interfaz podrá:
-
 Consultar la descripción de cada endpoint.
-
 Visualizar esquemas de entrada y salida.
-
-Ejecutar peticiones HTTP directamente desde el navegador.
-
-Scripts disponibles
-Comando	Descripción
-npm run dev	Inicia el servidor en modo desarrollo (con nodemon)
-npx prisma migrate dev --name <nombre>	Ejecuta migraciones de Prisma
-npx prisma studio	Abre la interfaz visual para inspeccionar la base de datos
-Autor
 
 Luis Eduardo Rivera Martos
 Desarrollador Full-Stack
