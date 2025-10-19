@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "e0eb7cfd-7f60-4ae9-89e8-34ed7aea38ba",
+		"name": "pruebaTecnicaGlocation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42899478"
+	},
+	"item": [
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Sistema de reservas\",\r\n  \"descripcion\": \"Aplicación web para agendar citas\",\r\n  \"estado\": true,\r\n  \"fechaInicio\": \"2025-10-22\",\r\n  \"fechaFin\": \"2025-12-31\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/projects/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"projects",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "read",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/projects/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"projects",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"descripcion\": \"Proyecto para culminar el anio EDITADO\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/projects/update/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"projects",
+						"update",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/projects/deleteParam/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"projects",
+						"deleteParam",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

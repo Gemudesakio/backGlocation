@@ -6,7 +6,7 @@
 
 generator client {
   provider = "prisma-client-js"
-  output   = "../generated/prisma"
+ // output   = "../generated/prisma"
 }
 
 datasource db {
@@ -19,9 +19,9 @@ model Proyecto{
   id Int @id @default(autoincrement())
   nombre String
   descripcion String
-  estado String @default("En progreso")
+  estado Boolean @default(false) //false = “En progreso” | true = “Finalizado"
   fechaInicio DateTime @default(now())
   fechaFin DateTime?
-  creatorId DateTime @default(now())
+  createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
