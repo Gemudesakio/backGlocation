@@ -20,35 +20,6 @@ Swagger (OpenAPI 3.0)	Generación automática de documentación de la API
 Nodemon	Reinicio automático del servidor durante el desarrollo
 Morgan	Middleware para logging de peticiones HTTP
 dotenv	Gestión de variables de entorno
-Estructura del proyecto
-backEnd/
-├── controllers/
-│   ├── create.js
-│   ├── read.js
-│   ├── update.js
-│   └── delete.js
-│
-├── middlewares/
-│   ├── validator.js
-│   └── error_handler.js   
-│   └── not_found_handler.js
-│
-├── schemas/
-│   ├── create.js
-│   └── update.js
-│
-├── routes/
-│   ├── index.js
-│   └── projects.js
-│
-├── prisma/
-│   └── schema.prisma
-│
-├── docs/
-│   └── swagger.js
-│
-├── server.js
-└── package.json
 
 Instalación y configuración
 1. Clonar el repositorio
