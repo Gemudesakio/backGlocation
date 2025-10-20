@@ -171,6 +171,100 @@
  *       404:
  *         description: Proyecto no encontrado
  */
+/**
+ * @swagger
+ * /api/projects/graphics:
+ *   get:
+ *     summary: Obtener conteo agregado de proyectos por estado
+ *     description: Devuelve la cantidad de proyectos finalizados y en proceso.
+ *     tags: [Proyectos]
+ *     responses:
+ *       200:
+ *         description: Conteo agregado por estado
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: true
+ *                 stats:
+ *                   type: object
+ *                   properties:
+ *                     finalizados:
+ *                       type: integer
+ *                       example: 2
+ *                     enProceso:
+ *                       type: integer
+ *                       example: 4
+ *       500:
+ *         description: Error interno al calcular las estadísticas
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: false
+ *                 message:
+ *                   type: string
+ *                   example: "Internal server error"
+ */
+
+/**
+ * @swagger
+ * /api/projects/summary:
+ *   get:
+ *     summary: Generar resumen de descripciones de proyectos con IA
+ *     description: Usa el modelo generativo configurado en el backend para producir un resumen en español de las descripciones de todos los proyectos.
+ *     tags: [Proyectos]
+ *     responses:
+ *       200:
+ *         description: Resumen generado correctamente
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: true
+ *                 resumen:
+ *                   type: string
+ *                   example: "La cartera incluye un panel analítico financiero, una app móvil de salud y un sistema de gestión de cursos, destacando entregas a tiempo y foco en valor de negocio."
+ *       502:
+ *         description: Error al invocar el proveedor de IA
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: false
+ *                 message:
+ *                   type: string
+ *                   example: "Error al generar resumen con Gemini"
+ *                 details:
+ *                   type: string
+ *                   example: "Provider 502: límite de cuota excedido"
+ *       500:
+ *         description: Error interno del servidor
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: false
+ *                 message:
+ *                   type: string
+ *                   example: "Internal server error"
+ */
+
 
 import { Router } from "express";
 import createOne from "../controllers/create.js";
