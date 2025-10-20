@@ -177,9 +177,12 @@ import createOne from "../controllers/create.js";
 import readAll from "../controllers/read.js";
 import updateOne from "../controllers/update.js";
 import { DeleteOneBody, DeleteOneParam } from "../controllers/delete.js";
+import getProjectStats from "../controllers/grafico.js";
 import schemaCreate from "../schemas/create.js";
 import schemaUpdate from "../schemas/update.js";
 import validator from "../middlewares/validator.js";
+import getProjectSummary from '../controllers/summary.js';
+
 
 const routerProjects = Router();
 
@@ -188,5 +191,8 @@ routerProjects.post("/create", validator(schemaCreate), createOne);
 routerProjects.put("/update/:id", validator(schemaUpdate), updateOne);
 routerProjects.delete("/deleteParam/:id", DeleteOneParam);
 routerProjects.delete("/deleteBody", DeleteOneBody);
+routerProjects.get("/graphics", getProjectStats);
+routerProjects.get('/summary', getProjectSummary);
+
 
 export default routerProjects;
