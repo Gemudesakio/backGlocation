@@ -24,7 +24,7 @@ Crear un archivo .env en la raíz del backend:
 PORT=8080
 CLIENT_URL=http://localhost:5173
 DATABASE_URL="postgresql://postgres:tu_password@localhost:5432/glocation_db?schema=public"
-
+GEMINI_API_KEY=API KEY QUE GENERES
 
 Asegúrate de que PostgreSQL esté corriendo y la base de datos glocation_db exista.
 
